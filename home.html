@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Game</title>
+    <link rel="shortcut icon" href="assets\favicon.jpg" type="image/x-icon"/>
+
+    <script>
+        function newLocation() {
+            window.location.href="index.html";
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: rgb(4, 19, 19);
+            color:white;
+            font-family: 'Cinzel', serif;
+        }
+
+        button{
+            font-family: 'Cinzel', serif;
+            padding:10px 15px;
+            font-size: 24px;
+            background: black;
+            border: 1px solid white;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button disabled>Press Enter To Start</button>
+    <div class="module" id="rule">
+        <h3>Rule For The Game</h3>
+        <ol>
+            <li>This Game will only works on web</li>
+            <li>For Moving The Rod right Press <b>D</b></li>
+            <li>For Moving The Rod left Press <b>A</b></li>
+            <li>The rod which have ball you are in that rod.</li>
+            <li>Your Score and result will be published by alert when Game will over</li>
+        </ol>
+        <h2>This Game is <b>designed</b> by <span id="oh">Pushpendra Singh</span></h2>
+
+
+</div>
+    <script>
+        document.addEventListener('keyup', (event) => {
+            var name = event.key;
+            var code = event.code;
+            if (code === 'Enter' || code === 'NumpadEnter') {
+                newLocation()
+            }
+        }, false);
+    </script>
+</body>
+</html>
